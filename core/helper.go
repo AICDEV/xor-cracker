@@ -1,11 +1,13 @@
 package core
 
 import (
+	"fmt"
 	"log"
 	"regexp"
 	"strings"
 )
 
+// KeyScore represents the score of a key
 type KeyScore struct {
 	KeyLength int
 	Score     float32
@@ -18,7 +20,7 @@ func Check(err error) {
 	}
 }
 
-// Cleans a line of text from all chars that are not [a-zA-z]
+// CleanTextLine Cleans a line of text from all chars that are not [a-zA-z]
 func CleanTextLine(l string) string {
 	reg, err := regexp.Compile("[^a-zA-z] ")
 	Check(err)
@@ -33,7 +35,7 @@ func XOR(a byte, b byte) byte {
 	return a ^ b
 }
 
-// Compute Hamming Distance from two bytes
+// HammingByteDistance Compute Hamming Distance from two bytes
 func HammingByteDistance(a byte, b byte) int {
 	c := 0
 	r := a ^ b
@@ -47,7 +49,7 @@ func HammingByteDistance(a byte, b byte) int {
 	return c
 }
 
-// Compute Hamming Distance of two strings
+// HammingStringDistance Compute Hamming Distance of two strings
 func HammingStringDistance(a string, b string) int {
 	if len(a) != len(b) {
 		log.Fatal("error in calc hamming distance from string. length of strings are not equal")
@@ -61,7 +63,7 @@ func HammingStringDistance(a string, b string) int {
 	return d
 }
 
-// Get most frequent elements from map by limit
+// GetTopValuesFromKeyMap Get most frequent elements from map by limit
 func GetTopValuesFromKeyMap(target map[int]float32, l int) []KeyScore {
 	tv := make([]KeyScore, 0, len(target))
 
@@ -82,14 +84,14 @@ func GetTopValuesFromKeyMap(target map[int]float32, l int) []KeyScore {
 	return tv[:l]
 }
 
-// Print GroupAnalyse ascii to string in terminal
+// GetStringKeys Print GroupAnalyse ascii to string in terminal
 func GetStringKeys(k [][]GroupAnalyse) (string, string) {
 	ko := ""
 	kt := ""
 
 	for _, v := range k {
-		ko += string(v[0].ascii)
-		kt += string(v[1].ascii)
+		ko += fmt.Sprint(v[0].ascii)
+		kt += fmt.Sprint(v[1].ascii)
 	}
 
 	return ko, kt

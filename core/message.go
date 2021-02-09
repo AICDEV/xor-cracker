@@ -1,5 +1,6 @@
 package core
 
+// ProcessInputMessage discover the input message put as an cmd arg
 func ProcessInputMessage(m string, kl int) float32 {
 	mf := []string{}
 
@@ -7,6 +8,7 @@ func ProcessInputMessage(m string, kl int) float32 {
 	return discoverMessageParts(mf, kl)
 }
 
+// GetMessageGroups split message into groups of same index
 func GetMessageGroups(m string, gl int) []string {
 	p := []string{}
 

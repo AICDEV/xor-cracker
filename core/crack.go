@@ -1,10 +1,12 @@
 package core
 
+// GroupAnalyse represents the score of an analysed group
 type GroupAnalyse struct {
 	ascii int
 	score int
 }
 
+// CrackKey try to crack the key
 func CrackKey(mg []string, rb []AnalyseStringResult, rl []AnalyseRuneResult) [][]GroupAnalyse {
 
 	pkg := [][]GroupAnalyse{}

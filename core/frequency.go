@@ -8,17 +8,19 @@ import (
 	"strings"
 )
 
+// AnalyseStringResult represents the analys result of a string
 type AnalyseStringResult struct {
 	value string
 	count int
 }
 
+// AnalyseRuneResult represents the analys result of a rune
 type AnalyseRuneResult struct {
 	value rune
 	count int
 }
 
-// Process a list of txt files and return word analyse result, bigram anaylse result and letter anaylse result
+// GetReferenceTextMetrics Process a list of txt files and return word analyse result, bigram anaylse result and letter anaylse result
 func GetReferenceTextMetrics(fn []string) ([]AnalyseStringResult, []AnalyseRuneResult) {
 
 	// bigram map
