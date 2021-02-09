@@ -6,7 +6,7 @@ import (
 	"os"
 	"strconv"
 
-	"aicdev.com/crack_xor_encryption/xor-cracker/core"
+	"github.com/aicdev/xor-cracker/core"
 	"github.com/olekukonko/tablewriter"
 	"gopkg.in/alecthomas/kingpin.v2"
 )
