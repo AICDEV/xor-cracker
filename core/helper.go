@@ -14,7 +14,7 @@ type KeyScore struct {
 // Check for error
 func Check(err error) {
 	if err != nil {
-		log.Fatalf("error occured: %v", err)
+		log.Fatalf("error occurred: %v", err)
 	}
 }
 
