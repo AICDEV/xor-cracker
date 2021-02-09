@@ -90,8 +90,8 @@ func GetStringKeys(k [][]GroupAnalyse) (string, string) {
 	kt := ""
 
 	for _, v := range k {
-		ko += fmt.Sprint(v[0].ascii)
-		kt += fmt.Sprint(v[1].ascii)
+		ko += string(v[0].ascii)
+		kt += string(v[1].ascii)
 	}
 
 	return ko, kt
