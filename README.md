@@ -19,7 +19,7 @@ go run main.go -m 3007090f4e20084f010e0a120b0a1f411902150a4c130b0b020e1f040a4713
 
 ## Tech
 The project is implemented in [golang](https://golang.org/). All calculations are based on:
-* [Hammuing distance](https://en.wikipedia.org/wiki/Hamming_distance)
+* [Hamming distance](https://en.wikipedia.org/wiki/Hamming_distance)
 * [Frequency Analysis](https://en.wikipedia.org/wiki/Frequency_analysis)
 
 ### How to train new languages
